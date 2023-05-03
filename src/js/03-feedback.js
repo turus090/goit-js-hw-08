@@ -23,7 +23,7 @@ const setForms  =() => {
 
 setForms()
 
-hadleUpdate = (e)=>{
+const hadleUpdate = (e)=>{
     draftInputs[e.target.name] = e.target.value
     localStorage.setItem(key,JSON.stringify(draftInputs))
 }
