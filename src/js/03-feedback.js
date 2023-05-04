@@ -29,7 +29,9 @@ const hadleUpdate = (e)=>{
 }
 
 feedback.addEventListener('input', throttle(hadleUpdate,500))
-feedback.addEventListener('submit', () =>{
+feedback.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    console.log(JSON.parse(localStorage.getItem(key)))
     localStorage.removeItem(key)
     setForms()
 })
